@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { TestScope } from '../testscope';
 
-test.only('assert delays', async ({ page }) => {
+test('assert delays', async ({ page }) => {
   const tester = new TestScope(page);
   await tester.Pages.homepage.visit()
   await page.getByRole('link', { name: 'JavaScript Delays' }).click();
