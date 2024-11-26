@@ -1,5 +1,6 @@
 import { Page } from "@playwright/test";
 import { Pages } from "./pages/pages";
+import { SliderPage } from "./pages/sliderPage";
 
 export class TestScope {
     page : Page;

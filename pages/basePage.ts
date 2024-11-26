@@ -15,10 +15,6 @@ abstract class BasePage {
     public async waitTillIdle() : Promise<void> {
         await this.page.waitForLoadState('load')
     }
-
-public async goToHomePage(): Promise<void>{
-    const tester = new TestScope(page)
-}    
     
 }
 

@@ -3,9 +3,10 @@ import { TestScope } from '../testscope';
 
 test('assert delays', async ({ page }) => {
   const tester = new TestScope(page);
-  await tester.Pages.homepage.visit()
-  await page.getByRole('link', { name: 'JavaScript Delays' }).click();
-  await page.getByRole('button', { name: 'Start' }).click();
+  const {homepage, delayspage} = tester.Pages
+  await homepage.visit() 
+  await delayspage.visit()
+  await delayspage.clickCountdownBtn()
 
   await tester.page.waitForTimeout(11000)
   await expect (page.locator('#delay')).toHaveValue('Liftoff!')

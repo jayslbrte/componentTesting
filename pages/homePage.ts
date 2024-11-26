@@ -15,7 +15,6 @@ export class HomePage extends BasePage{
 
     public async load(): Promise<void>{
         await this.page.goto('/');
-        // await this.page.pause()
         await expect(this.articleHeader).toBeVisible()
 
     }
