@@ -4,4 +4,11 @@ This is a practice on how to manipulate and test different common components fou
 
 ## WEB source: https://practice-automation.com/
 
-## Tool used for Testing: Playwright
+## tech stack: Playwright, typescript
+
+## How to Run the tests
+```bash
+   yarn install
+   node --version \\make sure that your node version is >= 18.0
+   npx playwright test \\ this should trigger executing 3 playwright tests
+```
